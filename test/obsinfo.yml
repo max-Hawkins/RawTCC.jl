@@ -1,0 +1,22 @@
+# Name of instrument
+instrument: BLUSE
+
+# Input map.  This lists which antenna-polarizations were connected to which
+# correlator inputs.  For dual-polarization inputs, the two polarization for a
+# given input are flattened into two sequential elements, with the "first"
+# polarization of the input given before the "second" polarization.  The
+# antenna-polarization for an input is given as a two element array.  The first
+# element specifies the antenna.  This can be given as a string for antenna
+# name or an integer for antenna number.  The second element specifies the
+# polarization.  Valid values are L,R,X,Y (case-insensitive).  Polarizations
+# must be specified for each input, even for single polarization instruments.
+input_map: [
+  [m000, x], [m000, y], [m004, x], [m004, y],
+  [m006, x], [m006, y], [m007, x], [m007, y],
+  [m023, x], [m023, y], [m026, x], [m026, y],
+  [m037, x], [m037, y], [m038, x], [m038, y],
+  [m040, x], [m040, y], [m044, x], [m044, y],
+  [m045, x], [m045, y], [m054, x], [m054, y],
+  [m055, x], [m055, y], [m056, x], [m056, y],
+  [m062, x], [m062, y], [m063, x], [m063, y]
+]

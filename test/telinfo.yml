@@ -1,0 +1,231 @@
+# Name of telescope
+telescope_name: MeerKAT
+
+# Geodetic location of telescope reference point.  `latitude` and `longitude`
+# may be given in decimal degrees as a float, or as a sexagesimal string with
+# `:` separators.  Putting quotes around sexagesimal strings is recommended to
+# prevent YAML libraries from converting to numeric form because some YAML
+# libraries do not handle negative sexagesimal conversions properly.
+# `altitude` is in meters above the geodetic reference ellipsoid (probably
+# WGS84, but the UVH5 spec is unclear on this point).
+latitude: "-30:42:39.8"
+longitude: "21:26:38.0"
+altitude: 1086.6
+
+# Default diameter for antennas
+# Not needed if all `antennas` entries have `diameter` field.
+antenna_diameter: 13.5
+
+# Reference frame for the antenna positions.  Can be `ecef` for the ITRF (i.e.
+# Earth-Centered-Earth-Fixed XYZ) frame or `enu` for a topocentric
+# East-North-Up frame with origin at the telescope reference point. If not
+# given, it will be assumed to be `ecef` unless the magnitude of the first
+# antenna's position vector is less than 6 million meters in which case it will
+# be assumed to be `enu`.  Best practice is to explicitly specify this.
+# This is not case-sensitive.
+antenna_position_frame: enu
+
+# List of antennas.  Each entry is a hash containing keys:
+#
+#   - `name`: A string value of the telescope name
+#   - `number`: An integer number identifying the telescope
+#   - `position`: A 3 elements array of floats giving the position in meters.
+#   - `diameter`: A float value for the diameter of the antenna
+#
+# The reference frame of the positions is given in `antennas_position_frame`.
+# The `diameter` entry is optional if a global `antenna_diameter` is given and
+# has the correct value for the antenna.
+antennas:
+  - name: m000
+    number: 0
+    position: [-8.264, -207.290, 8.597]
+    diameter: 13.5 # Just to show that this can be done
+  - name: m001
+    number: 1
+    position: [1.121, -171.762, 8.471]
+  - name: m002
+    number: 2
+    position: [-32.113, -224.236, 8.645]
+  - name: m003
+    number: 3
+    position: [-66.518, -202.276, 8.285]
+  - name: m004
+    number: 4
+    position: [-123.624, -252.946, 8.513]
+  - name: m005
+    number: 5
+    position: [-102.088, -283.120, 8.875]
+  - name: m006
+    number: 6
+    position: [-18.232, -295.428, 9.188]
+  - name: m007
+    number: 7
+    position: [-89.592, -402.732, 9.769]
+  - name: m008
+    number: 8
+    position: [-93.527, -535.026, 10.445]
+  - name: m009
+    number: 9
+    position: [32.357, -371.056, 10.140]
+  - name: m010
+    number: 10
+    position: [88.095, -511.872, 11.186]
+  - name: m011
+    number: 11
+    position: [84.012, -352.078, 10.151]
+  - name: m012
+    number: 12
+    position: [140.019, -368.267, 10.449]
+  - name: m013
+    number: 13
+    position: [236.792, -393.460, 11.124]
+  - name: m014
+    number: 14
+    position: [280.669, -285.792, 10.547]
+  - name: m015
+    number: 15
+    position: [210.644, -219.142, 9.738]
+  - name: m016
+    number: 16
+    position: [288.159, -185.873, 9.795]
+  - name: m017
+    number: 17
+    position: [199.624, -112.263, 8.955]
+  - name: m018
+    number: 18
+    position: [105.727, -245.870, 9.529]
+  - name: m019
+    number: 19
+    position: [170.787, -285.223, 10.071]
+  - name: m020
+    number: 20
+    position: [97.016, -299.638, 9.877]
+  - name: m021
+    number: 21
+    position: [-295.966, -327.241, 8.117]
+  - name: m022
+    number: 22
+    position: [-373.002, 0.544, 5.649]
+  - name: m023
+    number: 23
+    position: [-322.306, -142.185, 6.825]
+  - name: m024
+    number: 24
+    position: [-351.046, 150.088, 4.845]
+  - name: m025
+    number: 25
+    position: [-181.978, 225.617, 5.068]
+  - name: m026
+    number: 26
+    position: [-99.004, 17.045, 6.811]
+  - name: m027
+    number: 27
+    position: [40.475, -23.112, 7.694]
+  - name: m028
+    number: 28
+    position: [-51.179, -87.170, 7.636]
+  - name: m029
+    number: 29
+    position: [-88.762, -124.111, 7.700]
+  - name: m030
+    number: 30
+    position: [171.281, 113.949, 7.278]
+  - name: m031
+    number: 31
+    position: [246.567, 93.756, 7.469]
+  - name: m032
+    number: 32
+    position: [461.275, 175.505, 7.367]
+  - name: m033
+    number: 33
+    position: [580.678, 863.959, 3.600]
+  - name: m034
+    number: 34
+    position: [357.811, -28.308, 8.972]
+  - name: m035
+    number: 35
+    position: [386.152, -180.894, 10.290]
+  - name: m036
+    number: 36
+    position: [388.257, -290.759, 10.812]
+  - name: m037
+    number: 37
+    position: [380.286, -459.309, 12.172]
+  - name: m038
+    number: 38
+    position: [213.308, -569.080, 11.946]
+  - name: m039
+    number: 39
+    position: [253.748, -592.147, 12.441]
+  - name: m040
+    number: 40
+    position: [-26.858, -712.219, 11.833]
+  - name: m041
+    number: 41
+    position: [-287.545, -661.678, 9.949]
+  - name: m042
+    number: 42
+    position: [-361.714, -460.318, 8.497]
+  - name: m043
+    number: 43
+    position: [-629.853, -128.326, 5.264]
+  - name: m044
+    number: 44
+    position: [-896.164, 600.497, -0.640]
+  - name: m045
+    number: 45
+    position: [-1832.860, 266.750, 0.108]
+  - name: m046
+    number: 46
+    position: [-1467.341, 1751.923, -7.078]
+  - name: m047
+    number: 47
+    position: [-578.296, -517.297, 7.615]
+  - name: m048
+    number: 48
+    position: [-2805.653, 2686.863, -9.755]
+  - name: m049
+    number: 49
+    position: [-3605.957, 436.462, 2.696]
+  - name: m050
+    number: 50
+    position: [-2052.336, -843.715, 5.338]
+  - name: m051
+    number: 51
+    position: [-850.255, -769.359, 7.614]
+  - name: m052
+    number: 52
+    position: [-593.192, -1148.652, 10.550]
+  - name: m053
+    number: 53
+    position: [9.365, -1304.462, 15.032]
+  - name: m054
+    number: 54
+    position: [871.980, -499.812, 13.364]
+  - name: m055
+    number: 55
+    position: [1201.780, 96.492, 10.023]
+  - name: m056
+    number: 56
+    position: [1598.403, 466.668, 6.990]
+  - name: m057
+    number: 57
+    position: [294.645, 3259.915, -10.637]
+  - name: m058
+    number: 58
+    position: [2805.764, 2686.873, -3.660]
+  - name: m059
+    number: 59
+    position: [3686.427, 758.895, 11.822]
+  - name: m060
+    number: 60
+    position: [3419.683, -1840.478, 23.697]
+  - name: m061
+    number: 61
+    position: [-16.409, -2323.779, 21.304]
+  - name: m062
+    number: 62
+    position: [-1440.632, -2503.773, 21.683]
+  - name: m063
+    number: 63
+    position: [-3419.585, -1840.480, 16.383]

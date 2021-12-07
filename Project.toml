@@ -1,0 +1,18 @@
+name = "Rawx"
+uuid = "91b0a095-9e4b-44f1-be9b-21accde9c1ec"
+authors = ["David MacMahon <davidm@astro.berkeley.edu>"]
+version = "0.4.1"
+
+[deps]
+Blio = "87855aa7-8b24-49b4-b316-97c011f78d17"
+ERFA = "17511681-8477-586a-8d98-4cfd5a1f2ec3"
+EarthOrientation = "732a3c5d-d6c0-58bc-adb1-1b51709a25e2"
+Geodesy = "0ef565a4-170c-5f04-8de2-149903a85f3d"
+HDF5 = "f67ccb44-e63f-5c2f-98bd-6dc0ccc4ba2f"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+RadioInterferometry = "d7a65883-3b66-4fe4-a274-f0f417c4cddf"
+UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
+YAML = "ddb6d928-2868-570f-bddf-ab3f9cf99eb6"
+
+[compat]
+HDF5 = ">= 0.15.4"
